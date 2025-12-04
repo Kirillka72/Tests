@@ -34,3 +34,24 @@ const removeFirstOccurrences = (str, uStr) => {
     return result
 }
 console.log(removeFirstOccurrences('Hello, my name is Ivan', 'name'))
+
+//задача6
+const getRectangleString = (width, height) =>{
+    let str = "";
+    
+    for (let row = 0; row < height; row++) {
+        for (let col = 0; col < width; col++) {
+            if (row == 0 || row == height - 1) {
+                str += "*";
+            } else if (col == 0 || col == width - 1) {
+                str += "*";
+            } else {
+                str += " ";
+            }
+        }
+        str += "\n";
+    }
+    
+    return str;
+}
+console.log(getRectangleString(3, 3))
